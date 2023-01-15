@@ -1,1 +1,0 @@
-# IMPORTANT: Do not use the latest files in this directory to build your analyzer. Instead, use the latest hardware release in this github repository. The latest files in this directory can be a work in progress toward a next stable release.
