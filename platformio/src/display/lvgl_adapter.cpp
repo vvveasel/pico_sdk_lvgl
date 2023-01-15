@@ -7,7 +7,6 @@
 
 #include "io.h"
 #include "lvgl.h"
-#include "misc/hardware_config.h"
 #include "pico/stdlib.h"
 #include "tft_driver.h"
 #include "touch_driver.h"
@@ -129,10 +128,7 @@ void dump_stats() {
 void set_backlight(uint8_t percents) { tft_driver::set_backlight(percents); }
 
 void dump_screen() {
-  if (hardware_config::level() < hardware_config::LEVEL_MK3) {
-    printf("Hardware version %s doesn't support screen dump\n",
-           hardware_config::level_name());
-  }
+// HW capabilities check skipped
   tft_driver::dump_screen();
 }
 

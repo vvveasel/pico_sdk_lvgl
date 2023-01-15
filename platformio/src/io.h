@@ -25,6 +25,8 @@
 #define LED1_TOGGLE gpio_xor_mask(1ul << LED1_PIN)
 #define LED2_TOGGLE gpio_xor_mask(1ul << LED2_PIN)
 
+#define BRIGHTNESS_DEFAULT 65
+
 // #define TFT_D0_PIN 28
 // #define TFT_D1_PIN 3
 // #define TFT_D2_PIN 6
