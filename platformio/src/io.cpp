@@ -6,8 +6,8 @@ namespace io {
 
 void setup() {
   // A mask with all gpio output pins we use.
-  constexpr uint kOutputMask =
-      1ul << LED0_PIN | 1ul << LED1_PIN | 1ul << LED2_PIN ;
+  constexpr uint kOutputMask = 1ul << LED0_PIN;
+     // 1ul << LED0_PIN | 1ul << LED1_PIN | 1ul << LED2_PIN ;
       // | 1ul << TFT_D0_PIN |
       // 1ul << TFT_D1_PIN | 1ul << TFT_D2_PIN | 1ul << TFT_D3_PIN |
       // 1ul << TFT_D4_PIN | 1ul << TFT_D5_PIN | 1ul << TFT_D6_PIN |

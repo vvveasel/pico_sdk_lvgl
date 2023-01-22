@@ -22,6 +22,17 @@ static bool timer_callback(repeating_timer_t* rt) {
   return true;  // keep repeating
 }
 
+static void lvgl_test(void)
+{
+    lv_obj_t * btn = lv_btn_create(lv_scr_act(), NULL);     /*Add a button the current screen*/
+    //lv_obj_set_pos(btn, 10, 10);                            /*Set its position*/
+    lv_obj_align(btn,NULL,LV_ALIGN_CENTER,0,0);
+    lv_obj_set_size(btn, 120, 50);                          /*Set its size*/
+
+    lv_obj_t * label = lv_label_create(btn, NULL);          /*Add a label to the button*/
+    lv_label_set_text(label, "Button");                     /*Set the labels text*/
+}
+
 static Elapsed timer;
 
 void setup() {
@@ -40,7 +51,8 @@ void setup() {
   const bool timer_ok =
       add_repeating_timer_ms(5, timer_callback, NULL, &lvgl_ticker);
 
-  // Render the first page.
+  // Render the test page.
+  lvgl_test();
   // lv_task_handler();
   lv_refr_now(NULL);
   sleep_ms(30);  // let the screen process the data to avoid initial flicker.

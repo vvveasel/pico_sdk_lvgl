@@ -10,20 +10,20 @@
 
 // Diagnostics LEDs.
 #define LED0_PIN PICO_DEFAULT_LED_PIN
-#define LED1_PIN 17
-#define LED2_PIN 16
+// #define LED1_PIN 17
+// #define LED2_PIN 16
 
 #define LED0_ON gpio_set_mask(1ul << LED0_PIN)
-#define LED1_ON gpio_set_mask(1ul << LED1_PIN)
-#define LED2_ON gpio_set_mask(1ul << LED2_PIN)
+// #define LED1_ON gpio_set_mask(1ul << LED1_PIN)
+// #define LED2_ON gpio_set_mask(1ul << LED2_PIN)
 
 #define LED0_OFF gpio_clr_mask(1ul << LED0_PIN)
-#define LED1_OFF gpio_clr_mask(1ul << LED1_PIN)
-#define LED2_OFF gpio_clr_mask(1ul << LED2_PIN)
+// #define LED1_OFF gpio_clr_mask(1ul << LED1_PIN)
+// #define LED2_OFF gpio_clr_mask(1ul << LED2_PIN)
 
 #define LED0_TOGGLE gpio_xor_mask(1ul << LED0_PIN)
-#define LED1_TOGGLE gpio_xor_mask(1ul << LED1_PIN)
-#define LED2_TOGGLE gpio_xor_mask(1ul << LED2_PIN)
+// #define LED1_TOGGLE gpio_xor_mask(1ul << LED1_PIN)
+// #define LED2_TOGGLE gpio_xor_mask(1ul << LED2_PIN)
 
 #define BRIGHTNESS_DEFAULT 65
 

@@ -317,7 +317,7 @@ static void dma_irq_handler() {
 }
 
 static void init_dma() {
-  LED1_OFF;
+//  LED1_OFF;
   dma_chan = dma_claim_unused_channel(true);
 
   dma_config = dma_channel_get_default_config(dma_chan);
