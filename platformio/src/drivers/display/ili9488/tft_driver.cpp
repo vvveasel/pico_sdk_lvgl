@@ -8,7 +8,7 @@
 #include "hardware/irq.h"
 #include "hardware/pio.h"
 #include "hardware/pwm.h"
-#include "io.h"
+#include "misc/io.h"
 #include "pico/stdlib.h"
 #include "tft_driver.pio.h"
 

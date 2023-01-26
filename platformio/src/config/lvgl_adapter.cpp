@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-#include "io.h"
+#include "misc/io.h"
 #include "lvgl.h"
 #include "pico/stdlib.h"
 #include "tft_driver.h"

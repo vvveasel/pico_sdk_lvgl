@@ -761,7 +761,9 @@ static lv_font_fmt_txt_dsc_t font_dsc = {
     .cmap_num = 1,
     .bpp = 4,
     .kern_classes = 0,
-    .bitmap_format = 0
+    .bitmap_format = 0,
+    .last_letter = 0,
+    .last_glyph_id = 0
 };
 
 

@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "display/lvgl_adapter.h"
-#include "display/tft_driver.h"
-#include "display/touch_driver.h"
-#include "io.h"
+#include "config/lvgl_adapter.h"
+#include "tft_driver.h"
+#include "touch_driver.h"
+#include "misc/io.h"
 #include "lvgl.h"
 #include "misc/elapsed.h"
 #include "misc/memory.h"
