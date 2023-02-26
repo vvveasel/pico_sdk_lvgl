@@ -22,7 +22,7 @@ namespace lvgl_adapter {
 #define MY_DISP_HOR_RES (480)
 
 // A static variable to store the buffers.
-static lv_disp_buf_t disp_buf;
+static lv_disp_draw_buf_t disp_buf;
 static lv_disp_drv_t disp_drv;
 
 // LVGL renders up to this number of pixels at a time.
@@ -60,12 +60,12 @@ static void my_flush_cb(lv_disp_drv_t* disp_drv, const lv_area_t* area,
 void static init_display_driver() {
   // Initialize `disp_buf` with the buffer. We pass NULL for
   // the second (optional) buffer since we don't use DMA.
-  lv_disp_buf_init(&disp_buf, buf_1, buf_2, kBufferSize);
+  lv_disp_draw_buf_init(&disp_buf, buf_1, buf_2, kBufferSize);
 
   lv_disp_drv_init(&disp_drv);
 
   // Sets an initialized buffer.
-  disp_drv.buffer = &disp_buf;
+  disp_drv.draw_buf = &disp_buf;
   // Sets a flush callback to draw to the display.
   disp_drv.flush_cb = my_flush_cb;
 
@@ -74,7 +74,7 @@ void static init_display_driver() {
 }
 
 // This is how LVGL reads the touch screen's status.
-bool my_touch_read_cb(lv_indev_drv_t* drv, lv_indev_data_t* data) {
+void my_touch_read_cb(lv_indev_drv_t* drv, lv_indev_data_t* data) {
   uint16_t x, y;
   bool is_pressed;
   touch_driver::touch_read(&x, &y, &is_pressed);
@@ -82,7 +82,7 @@ bool my_touch_read_cb(lv_indev_drv_t* drv, lv_indev_data_t* data) {
   data->point.y = y;
   data->state = is_pressed ? LV_INDEV_STATE_PR : LV_INDEV_STATE_REL;
   // No buffering now so no more data read.
-  return false;
+//  return false;
 }
 
 void static init_touch_driver() {

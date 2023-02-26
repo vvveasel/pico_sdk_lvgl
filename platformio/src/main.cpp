@@ -24,13 +24,47 @@ static bool timer_callback(repeating_timer_t* rt) {
 
 static void lvgl_test(void)
 {
-    lv_obj_t * btn = lv_btn_create(lv_scr_act(), NULL);     /*Add a button the current screen*/
-    //lv_obj_set_pos(btn, 10, 10);                            /*Set its position*/
-    lv_obj_align(btn,NULL,LV_ALIGN_CENTER,0,0);
-    lv_obj_set_size(btn, 120, 50);                          /*Set its size*/
+      /*Init the style for the default state*/
+    // static lv_style_t style;
+    // lv_style_init(&style);
 
-    lv_obj_t * label = lv_label_create(btn, NULL);          /*Add a label to the button*/
-    lv_label_set_text(label, "Button");                     /*Set the labels text*/
+    // lv_style_set_radius(&style, 3);
+
+    // lv_style_set_bg_opa(&style, LV_OPA_100);
+    // lv_style_set_bg_color(&style, lv_palette_main(LV_PALETTE_RED));
+    // lv_style_set_bg_grad_color(&style, lv_palette_darken(LV_PALETTE_RED, 2));
+    // lv_style_set_bg_grad_dir(&style, LV_GRAD_DIR_NONE);
+
+    // lv_style_set_border_opa(&style, LV_OPA_40);
+    // lv_style_set_border_width(&style, 2);
+    // lv_style_set_border_color(&style, lv_palette_main(LV_PALETTE_GREY));
+
+    // lv_style_set_shadow_width(&style, 8);
+    // lv_style_set_shadow_color(&style, lv_palette_main(LV_PALETTE_GREY));
+    // lv_style_set_shadow_ofs_y(&style, 8);
+
+    // lv_style_set_outline_opa(&style, LV_OPA_COVER);
+    // lv_style_set_outline_color(&style, lv_palette_main(LV_PALETTE_RED));
+
+    // lv_style_set_text_color(&style, lv_color_white());
+    // lv_style_set_pad_all(&style, 10);
+
+    // lv_obj_t * btn = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    // lv_obj_remove_style_all(btn);                          /*Remove the style coming from the theme*/
+    // lv_obj_add_style(btn, &style, 0);
+    // //lv_obj_set_pos(btn, 10, 10);                            /*Set its position*/
+    // lv_obj_align(btn,LV_ALIGN_CENTER,0,0);
+    // lv_obj_set_size(btn, 120, 50);                          /*Set its size*/
+
+    // lv_obj_t * label = lv_label_create(btn);          /*Add a label to the button*/
+    // lv_obj_align(label,LV_ALIGN_CENTER,0,0);
+    // lv_label_set_text(label, "Button");                     /*Set the labels text*/
+
+    lv_obj_t * cw;
+
+    cw = lv_colorwheel_create(lv_scr_act(), true);
+    lv_obj_set_size(cw, 200, 200);
+    lv_obj_center(cw);
 }
 
 static Elapsed timer;
