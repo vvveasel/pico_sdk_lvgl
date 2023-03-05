@@ -362,7 +362,7 @@ void begin() {
   write_data_byte(0x1A);
   write_data_byte(0x0F);
 
-  write_command_byte(0XE1);
+  write_command_byte(0xE1);
   write_data_byte(0x00);
   write_data_byte(0x16);
   write_data_byte(0x19);
@@ -379,7 +379,7 @@ void begin() {
   write_data_byte(0x37);
   write_data_byte(0x0F);
 
-  write_command_byte(0XC0);  // Power Control 1
+  write_command_byte(0xC0);  // Power Control 1
   write_data_byte(0x17);     // Vreg1out
   write_data_byte(0x15);     // Verg2out
 
@@ -399,7 +399,7 @@ void begin() {
   write_command_byte(0x3A);  // Interface Pixel Format
   write_data_byte(0x55);     // 16 bit
 
-  write_command_byte(0XB0);  // Interface Mode Control
+  write_command_byte(0xB0);  // Interface Mode Control
   write_data_byte(0x80);     // SDO NOT USE
 
   write_command_byte(0xB1);  // Frame rate
@@ -421,13 +421,11 @@ void begin() {
   write_command_byte(0xB4);  // Display Inversion Control
   write_data_byte(0x02);     // 2-dot
 
-  write_command_byte(
-      0XB6);  // Display Function Control  RGB/MCU Interface Control
-
+  write_command_byte(0xB6);  // Display Function Control  RGB/MCU Interface Control
   write_data_byte(0x02);  // MCU
   write_data_byte(0x02);  // Source,Gate scan direction
 
-  write_command_byte(0XE9);  // Set Image Function
+  write_command_byte(0xE9);  // Set Image Function
   write_data_byte(0x00);     // Disable 24 bit data
 
   write_command_byte(0xF7);  // Adjust Control

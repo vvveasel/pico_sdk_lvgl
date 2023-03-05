@@ -25,46 +25,85 @@ static bool timer_callback(repeating_timer_t* rt) {
 static void lvgl_test(void)
 {
       /*Init the style for the default state*/
-    // static lv_style_t style;
-    // lv_style_init(&style);
+    static lv_style_t style1;
+    static lv_style_t style2;
+    static lv_style_t style3;
+    static lv_style_t style4;
+    static lv_style_t style5;
 
-    // lv_style_set_radius(&style, 3);
+    lv_style_init(&style1);
+    lv_style_init(&style2);
+    lv_style_init(&style3);
+    lv_style_init(&style4);
+    lv_style_init(&style5);
 
-    // lv_style_set_bg_opa(&style, LV_OPA_100);
-    // lv_style_set_bg_color(&style, lv_palette_main(LV_PALETTE_RED));
-    // lv_style_set_bg_grad_color(&style, lv_palette_darken(LV_PALETTE_RED, 2));
-    // lv_style_set_bg_grad_dir(&style, LV_GRAD_DIR_NONE);
+    lv_style_set_bg_color(&style1, lv_color_make(255, 0, 0));
+    lv_style_set_text_color(&style1, lv_color_white());
+    lv_style_set_bg_opa(&style1, LV_OPA_100);
 
-    // lv_style_set_border_opa(&style, LV_OPA_40);
-    // lv_style_set_border_width(&style, 2);
-    // lv_style_set_border_color(&style, lv_palette_main(LV_PALETTE_GREY));
+    lv_style_set_bg_color(&style2, lv_color_make(0, 255, 0));
+    lv_style_set_text_color(&style2, lv_color_white());
+    lv_style_set_bg_opa(&style2, LV_OPA_100);
 
-    // lv_style_set_shadow_width(&style, 8);
-    // lv_style_set_shadow_color(&style, lv_palette_main(LV_PALETTE_GREY));
-    // lv_style_set_shadow_ofs_y(&style, 8);
+    lv_style_set_bg_color(&style3, lv_color_make(0, 0, 255));
+    lv_style_set_text_color(&style3, lv_color_white());
+    lv_style_set_bg_opa(&style3, LV_OPA_100);
 
-    // lv_style_set_outline_opa(&style, LV_OPA_COVER);
-    // lv_style_set_outline_color(&style, lv_palette_main(LV_PALETTE_RED));
+    lv_style_set_bg_color(&style4, lv_color_make(255, 255, 255));
+    lv_style_set_text_color(&style4, lv_color_black());
+    lv_style_set_bg_opa(&style4, LV_OPA_100);
 
-    // lv_style_set_text_color(&style, lv_color_white());
-    // lv_style_set_pad_all(&style, 10);
+    lv_style_set_bg_color(&style5, lv_color_make(0, 0, 0));
+    lv_style_set_text_color(&style5, lv_color_white());
+    lv_style_set_bg_opa(&style5, LV_OPA_100);
 
-    // lv_obj_t * btn = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
-    // lv_obj_remove_style_all(btn);                          /*Remove the style coming from the theme*/
-    // lv_obj_add_style(btn, &style, 0);
-    // //lv_obj_set_pos(btn, 10, 10);                            /*Set its position*/
-    // lv_obj_align(btn,LV_ALIGN_CENTER,0,0);
-    // lv_obj_set_size(btn, 120, 50);                          /*Set its size*/
 
-    // lv_obj_t * label = lv_label_create(btn);          /*Add a label to the button*/
-    // lv_obj_align(label,LV_ALIGN_CENTER,0,0);
-    // lv_label_set_text(label, "Button");                     /*Set the labels text*/
 
-    lv_obj_t * cw;
+    lv_obj_t * btn1 = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    lv_obj_remove_style_all(btn1);                          /*Remove the style coming from the theme*/
+    lv_obj_add_style(btn1, &style1, 0);
+    lv_obj_align(btn1,LV_ALIGN_TOP_LEFT,0,0);
+    lv_obj_set_size(btn1, 120, 50);                          /*Set its size*/
+    lv_obj_t * label1 = lv_label_create(btn1);          /*Add a label to the button*/
+    lv_obj_align(label1,LV_ALIGN_CENTER,0,0);
+    lv_label_set_text(label1, "RED");                     /*Set the labels text*/
 
-    cw = lv_colorwheel_create(lv_scr_act(), true);
-    lv_obj_set_size(cw, 200, 200);
-    lv_obj_center(cw);
+    lv_obj_t * btn2 = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    lv_obj_remove_style_all(btn2);                          /*Remove the style coming from the theme*/
+    lv_obj_add_style(btn2, &style2, 0);
+    lv_obj_align(btn2,LV_ALIGN_TOP_RIGHT,0,0);
+    lv_obj_set_size(btn2, 120, 50);                          /*Set its size*/
+    lv_obj_t * label2 = lv_label_create(btn2);          /*Add a label to the button*/
+    lv_obj_align(label2,LV_ALIGN_CENTER,0,0);
+    lv_label_set_text(label2, "GREEN");                     /*Set the labels text*/
+
+    lv_obj_t * btn3 = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    lv_obj_remove_style_all(btn3);                          /*Remove the style coming from the theme*/
+    lv_obj_add_style(btn3, &style3, 0);
+    lv_obj_align(btn3,LV_ALIGN_BOTTOM_LEFT,0,0);
+    lv_obj_set_size(btn3, 120, 50);                          /*Set its size*/
+    lv_obj_t * label3 = lv_label_create(btn3);          /*Add a label to the button*/
+    lv_obj_align(label3,LV_ALIGN_CENTER,0,0);
+    lv_label_set_text(label3, "BLUE");                     /*Set the labels text*/
+
+    lv_obj_t * btn4 = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    lv_obj_remove_style_all(btn4);                          /*Remove the style coming from the theme*/
+    lv_obj_add_style(btn4, &style4, 0);
+    lv_obj_align(btn4,LV_ALIGN_BOTTOM_RIGHT,0,0);
+    lv_obj_set_size(btn4, 120, 50);                          /*Set its size*/
+    lv_obj_t * label4 = lv_label_create(btn4);          /*Add a label to the button*/
+    lv_obj_align(label4,LV_ALIGN_CENTER,0,0);
+    lv_label_set_text(label4, "WHITE");                     /*Set the labels text*/
+
+    lv_obj_t * btn5 = lv_btn_create(lv_scr_act());     /*Add a button the current screen*/
+    lv_obj_remove_style_all(btn5);                          /*Remove the style coming from the theme*/
+    lv_obj_add_style(btn5, &style5, 0);
+    lv_obj_align(btn5,LV_ALIGN_CENTER,0,0);
+    lv_obj_set_size(btn5, 120, 50);                          /*Set its size*/
+    lv_obj_t * label5 = lv_label_create(btn5);          /*Add a label to the button*/
+    lv_obj_align(label5,LV_ALIGN_CENTER,0,0);
+    lv_label_set_text(label5, "BLACK");                     /*Set the labels text*/
+
 }
 
 static Elapsed timer;
