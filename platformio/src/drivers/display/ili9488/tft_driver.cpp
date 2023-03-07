@@ -15,8 +15,8 @@
 namespace tft_driver {
 
 // Plain GPIO output pins.
-#define TFT_RST_PIN 1  // Active low.
-#define TFT_DC_PIN 2   // 1: data, 0: command.
+#define TFT_RST_PIN 27  // Active low.
+#define TFT_DC_PIN 26   // 1: data, 0: command.
 #define TFT_BL_PIN 15  // Active high
 
 // Outputs managed by PioTft.
@@ -521,8 +521,8 @@ void dump_screen() {
   printf("\n###BEGIN screen capture\n");
   // Pixels that are yet to be output. We use a simple compression
   // that groups together consecutive identical pixels.
-  int pending_pixels_count;
-  uint pending_pixels_value;
+  int pending_pixels_count=0;
+  uint pending_pixels_value=0;
   for (int y = 0; y < HEIGHT; y++) {
     // Record header: x, y, count
     printf("#%d,%d,%d", 0, y, WIDTH);

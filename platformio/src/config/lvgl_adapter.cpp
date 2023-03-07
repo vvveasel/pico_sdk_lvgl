@@ -28,7 +28,7 @@ static lv_disp_drv_t disp_drv;
 // LVGL renders up to this number of pixels at a time.
 // We use two buffers, each with a 1/4 screen size and alternate
 // render/DMA.
-static constexpr uint32_t kBufferSize = MY_DISP_HOR_RES * 80;
+static constexpr uint32_t kBufferSize = MY_DISP_HOR_RES * 40; //Was 80
 //
 static lv_color_t buf_1[kBufferSize];
 static lv_color_t buf_2[kBufferSize];

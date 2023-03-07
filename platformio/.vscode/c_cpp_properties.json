@@ -1,0 +1,89 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/include",
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src",
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl",
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl/src",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK111/hardware",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/pico",
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src/drivers/display/ili9488",
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src/drivers/touch/ft6206",
+                "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/lib",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/wizio/pico",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/wizio/newlib",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/include",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/cmsis/include",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/boards",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/VFS",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/fatfs",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/cmsis-dap",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/hal_tft",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/lfs",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/include",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/include",
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src",
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl",
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl/src",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK111/hardware",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/pico",
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src/drivers/display/ili9488",
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src/drivers/touch/ft6206",
+                    "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/lib",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/wizio/pico",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/wizio/newlib",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/include",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/cmsis/include",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/boards",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/VFS",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/fatfs",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/cmsis-dap",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/hal_tft",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/lfs",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/include",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60106",
+                "PICO_STDIO_UART",
+                "LV_CONF_INCLUDE_SIMPLE",
+                "NDEBUG",
+                "PICO_ON_DEVICE=1",
+                "PICO_HEAP_SIZE=2048",
+                "PICO_STACK_SIZE=2048",
+                "PICO_WIFI",
+                "BAREMETAL",
+                "LIB_PICO_STDIO_UART",
+                "PICO_STDIO_UART",
+                "__PLATFORMIO_BUILD_DEBUG__",
+                ""
+            ],
+            "compilerPath": "C:/Users/alexa/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-march=armv6-m",
+                "-mcpu=cortex-m0plus",
+                "-mthumb",
+                "-march=armv6-m",
+                "-mcpu=cortex-m0plus",
+                "-mthumb",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

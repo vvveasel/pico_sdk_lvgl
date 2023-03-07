@@ -1,0 +1,71 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+//
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/build/pico_ili9488_ft6206/APPLICATION.elf",
+            "name": "Debug with OpenOCD",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "interface": "swd",
+            "device": "RP2040",
+            "configFiles": [
+                "interface/picoprobe.cfg",
+                "target/rp2040.cfg"
+            ],
+            "searchDir": [
+                "C:/Users/alexa/Projects/Granny/tools/OpenOCD/share/openocd/scripts"
+            ],
+            "svdFile": "C:/Users/alexa/.platformio/platforms/wizio-pico/misc/svd/rp2040.svd",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/build/pico_ili9488_ft6206/APPLICATION.elf",
+            "projectEnvName": "pico_ili9488_ft6206",
+            "toolchainBinDir": "C:/Users/alexa/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/alexa/.platformio/platforms/wizio-pico/misc/svd/rp2040.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/build/pico_ili9488_ft6206/APPLICATION.elf",
+            "projectEnvName": "pico_ili9488_ft6206",
+            "toolchainBinDir": "C:/Users/alexa/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/alexa/.platformio/platforms/wizio-pico/misc/svd/rp2040.svd"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/build/pico_ili9488_ft6206/APPLICATION.elf",
+            "projectEnvName": "pico_ili9488_ft6206",
+            "toolchainBinDir": "C:/Users/alexa/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/alexa/.platformio/platforms/wizio-pico/misc/svd/rp2040.svd",
+            "loadMode": "manual"
+        }
+    ]
+}
