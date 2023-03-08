@@ -12,6 +12,7 @@
                 "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src",
                 "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl",
                 "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl/src",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/freertos/src",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK111/hardware",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/pico",
                 "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src/drivers/display/ili9488",
@@ -22,6 +23,7 @@
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/include",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/cmsis/include",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/boards",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/freertos/include",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/VFS",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/fatfs",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/cmsis-dap",
@@ -29,6 +31,8 @@
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/lfs",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/include",
                 "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/src",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/wiring/include",
+                "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/wiring/src",
                 ""
             ],
             "browse": {
@@ -38,6 +42,7 @@
                     "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src",
                     "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl",
                     "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/.pio/libdeps/pico_ili9488_ft6206/lvgl/src",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/freertos/src",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK111/hardware",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/pico",
                     "C:/Users/alexa/Projects/Granny/repos/pico_sdk_lvgl/platformio/src/drivers/display/ili9488",
@@ -48,6 +53,7 @@
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/include",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/cmsis/include",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/SDK/boards",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/freertos/include",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/VFS",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/fatfs",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/cmsis-dap",
@@ -55,6 +61,8 @@
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/lfs",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/include",
                     "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/posix/src",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/wiring/include",
+                    "C:/Users/alexa/.platformio/packages/framework-wizio-pico/library/wiring/src",
                     ""
                 ]
             },
@@ -68,6 +76,7 @@
                 "PICO_STACK_SIZE=2048",
                 "PICO_WIFI",
                 "BAREMETAL",
+                "USE_FREERTOS",
                 "LIB_PICO_STDIO_UART",
                 "PICO_STDIO_UART",
                 "__PLATFORMIO_BUILD_DEBUG__",

@@ -5,7 +5,6 @@
 #include "misc/io.h"
 #include "lvgl.h"
 #include "misc/elapsed.h"
-#include "misc/memory.h"
 #include "pico/stdlib.h"
 
 constexpr uint8_t kColor8Blue = 0x3;
@@ -108,12 +107,7 @@ static void lvgl_test(void)
 
 static Elapsed timer;
 
-void setup() {
-  stdio_init_all();
-
-  io::setup();
-
-  LED0_ON;
+void f_LVGL_SETUP() {
 
   touch_driver::setup();
 
@@ -122,7 +116,7 @@ void setup() {
   lvgl_adapter::setup();
 
   const bool timer_ok =
-      add_repeating_timer_ms(5, timer_callback, NULL, &lvgl_ticker);
+      add_repeating_timer_ms(20, timer_callback, NULL, &lvgl_ticker);
 
   // Render the test page.
   lvgl_test();
@@ -136,27 +130,32 @@ void setup() {
 
 }
 
-void loop() {
+void f_DIPLAY_LOOP() 
+{
   // LVGL processing and rendering.
   lv_task_handler();
 
   // Heartbeat.
-  if (to_ms_since_boot(get_absolute_time()) % 1000 < 50) {
+  if (to_ms_since_boot(get_absolute_time()) % 1000 < 50) 
+  {
     LED0_ON;
   } else {
     LED0_OFF;
   }
 
   // Periodic report over USB/Serial. For debugging.
-  if (elapsed_from_last_dump.elapsed_millis() > 3000) {
+  if (elapsed_from_last_dump.elapsed_millis() > 3000) 
+  {
     elapsed_from_last_dump.reset();
 
     static uint print_cycle = 0;
 
-    switch (print_cycle) {
+    switch (print_cycle) 
+    {
       default:
       case 0:
-        printf("\nFree memory: %d\n", memory::free_memory());
+        printf("\nFree heap: %d\n",xPortGetFreeHeapSize());
+        printf("\nWatermark: %d\n",xPortGetMinimumEverFreeHeapSize());
         puts("Pico SDK version: " PICO_SDK_VERSION_STRING);
         print_cycle = 1;
         break;
@@ -171,12 +170,35 @@ void loop() {
         break;
     }
   }
+  vTaskDelay(pdMS_TO_TICKS(10));
+}
+
+void t_DISPLAY(void *arg)
+{
+  printf("\nDISPLAY task");
+  for (;;) f_DIPLAY_LOOP();
+}
+
+void t_INPUT(void *arg)
+{
+  printf("\nINPUT task");
+  for (;;)
+  {
+    printf("\nReceive");
+    vTaskDelay(pdMS_TO_TICKS(1000));
+  } 
+  
 }
 
 // Arduino like main.
-int main() {
-  setup();
-  for (;;) {
-    loop();
-  }
+int main() 
+{
+  stdio_init_all();
+  io::setup();
+  LED0_ON;
+  f_LVGL_SETUP();
+
+  xTaskCreate(t_DISPLAY, "DISPLAY", 2048, NULL, 2, NULL);
+  xTaskCreate(t_INPUT, "INPUT", 1024, NULL, 2, NULL);
+  vTaskStartScheduler();
 }
